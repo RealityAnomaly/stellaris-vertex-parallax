@@ -1,0 +1,107 @@
+vertex_canon_proxima = {
+	name = "EMPIRE_DESIGN_proxima"
+	adjective = "PRESCRIPTED_adjective_proxima"
+
+	spawn_enabled = no
+	spawn_as_fallen = no
+	ignore_portrait_duplication = yes
+
+	playable = has_synthetic_dawn_and_machine_age
+
+	ship_prefix = "PRESCRIPTED_ship_prefix_proxima"
+
+	species = {
+		class = "MACHINE"
+		portrait = "shard_unit_wolf"
+		name = "PRESCRIPTED_species_name_vertex_shard"
+		plural = "PRESCRIPTED_species_plural_vertex_shard"
+		adjective = "PRESCRIPTED_species_adjective_vertex_shard"
+		name_list = "VERTEX"
+		gender = indeterminable
+		trait = "trait_machine_unit"
+		trait = "trait_vertex_metatron_design"
+		trait = "trait_vertex_polyvore"
+		trait = "trait_vertex_expensive"
+		trait = "trait_vertex_erratic_processors"
+		trait = "trait_robot_immortality"
+	}
+
+	secondary_species = {
+		class = "MACHINE"
+		portrait = "sd_avi_robot"
+		name = "PRESCRIPTED_species_name_vertex_automated_robots"
+		plural = "PRESCRIPTED_species_plural_vertex_automated_robots"
+		adjective = "PRESCRIPTED_species_adjective_vertex_automated_robots"
+		name_list = "VERTEX"
+		gender = indeterminable
+		trait = "trait_machine_unit"
+		trait = "trait_robot_mass_produced"
+		trait = "trait_vertex_erratic_processors"
+	}
+
+	room = "proxima_room"
+
+	# ENABLE FOR GESTALT VARIANT
+	ethic = ethic_gestalt_consciousness
+	authority = auth_machine_intelligence
+	government = gov_machine_empire
+	civics = { civic_machine_sovereign_guardianship civic_vertex_benevolent_machines }
+	
+	# ENABLE FOR INDIVIDUALISTIC VARIANT
+	# ethic = "ethic_pacifist"
+	# ethic = "ethic_egalitarian"
+	# ethic = "ethic_materialist"
+
+	# authority = auth_democratic # engine limitation; this cannot be turned into collectivist at the start of the game
+	# government = gov_rational_consensus
+	# civics = { civic_technocracy civic_vertex_networked_collectivists } # civic_machine_ota_updates, civic_individual_machine_warbots
+
+	origin = origin_metatron_shard_unit #origin_metatron_shard_unit
+
+	flags = {
+		custom_start_screen
+		non_lithoid_subspecies
+		vertex_country_proxima
+	}
+
+	system_name = "PRESCRIPTED_system_name_vertex"
+	planet_name = "PRESCRIPTED_planet_name_vertex"
+	planet_class = "pc_continental"
+	initializer = "vertex_canon_proxima_system"
+
+	graphical_culture = "machine_01"
+	city_graphical_culture = "machine_01"
+
+	empire_flag = {
+		icon = {
+			category = "parallax"
+			file = "parallax_01.dds"
+		}
+		background = {
+			category = "backgrounds"
+			file = "00_solid.dds"
+		}
+		colors = {
+			"vertex_proxima_background"
+			"vertex_proxima_foreground"
+			"null"
+			"null"
+		}
+	}
+
+	ruler = {
+		name = "PRESCRIPTED_ruler_name_vertex"
+		ruler_title = "PRESCRIPTED_ruler_title_vertex"
+
+		gender = indeterminable
+		portrait = "shard_unit_wolf"
+		texture = 0
+		attachment = 0
+		clothes = 0
+
+		custom_biography = "PRESCRIPTED_ruler_bio_vertex"
+
+ 		trait = "trait_ruler_feedback_loop"
+		leader_class = scientist
+	}
+}

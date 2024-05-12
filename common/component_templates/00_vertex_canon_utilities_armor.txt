@@ -1,0 +1,28 @@
+utility_component_template = { # Large
+	key = "LARGE_VERTEX_VOIMA_ARMOR"
+	size = large
+	icon = "GFX_ship_part_vertex_voima_armor"
+	icon_frame = 1
+	#power = @power_L3
+
+	component_set = "VERTEX_VOIMA_ARMOR"
+	custom_tooltip = tt_LARGE_VERTEX_VOIMA_ARMOR
+
+	# modifiers section
+	modifier = {
+		ship_armor_add = @armor_L3
+	}
+
+	# requirements section
+	prerequisites = { "tech_vertex_voimaflex" }
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @l_t7_cost
+		}
+		upkeep = {
+			energy = @l_t7_upkeep_energy
+			alloys = @l_t7_upkeep_alloys
+		}
+	}
+}

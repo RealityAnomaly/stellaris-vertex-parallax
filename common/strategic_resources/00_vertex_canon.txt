@@ -1,0 +1,33 @@
+sr_vertex_chaotic_matter = {
+	tradable = no
+	category = rare
+	# market_amount = 5
+	# market_price = 1000
+	max = 100
+
+	#prerequisites = { "tech_mine_dark_matter" }
+	visibility_prerequisite = { always = yes }
+
+	#deficit_modifier = dark_matter_deficit #found in static modifiers
+
+	ai_weight = {
+		weight = 100
+	}
+
+	ai_wants = {
+		base = 5
+	}
+}
+
+vertex_singularity_cores = {
+	tradable = no
+	max = 10 # this should be able to be increased later
+
+	ai_weight = {
+		weight = 100
+	}
+
+	ai_wants = {
+		base = 5
+	}
+}

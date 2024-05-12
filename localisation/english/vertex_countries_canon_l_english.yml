@@ -1,0 +1,50 @@
+﻿l_english:
+ # Canon Custom Empire: Vertex Network
+ name_list_VERTEX:0 "Vertex"
+
+ me_Shard:0 "Solitude"
+ SPEC_Shard:0 "Shard Unit"
+ SPEC_Shard_pl:0 "Shards"
+ SPEC_Shard_planet:0 "Proxima"
+ SPEC_Shard_system:0 "Solitude"
+
+ vertex_canon_proxima_system_NAME:0 "Solitude"
+ vertex_canon_proxima_system_DESC:0 "Placeholder"
+
+ EMPIRE_DESIGN_proxima:0 "Proxima"
+ EMPIRE_DESIGN_proxima_desc:0 "Vertex, or the Vertex Network, is a network of sentient artificial intelligences which operate both as individuals and as one. Created in 2055 by a Metatron military research project, Vertex has expanded to colonise its own functional country, Proxima, and now works both to protect and uplift the rest of the world."
+ PRESCRIPTED_adjective_proxima:0 "Shard"
+ PRESCRIPTED_ship_prefix_proxima:0 "PRX"
+ PRESCRIPTED_planet_name_vertex:0 "Alpha Node"
+ PRESCRIPTED_system_name_vertex:0 "Solitude"
+ PRESCRIPTED_ruler_name_vertex:0 "VRT-X7"
+ PRESCRIPTED_ruler_title_vertex:0 "Controller"
+ PRESCRIPTED_species_name_vertex_shard:0 "Shard Unit"
+ PRESCRIPTED_species_plural_vertex_shard:0 "Shards"
+ PRESCRIPTED_species_adjective_vertex_shard:0 "Shard $1$"
+
+ PRESCRIPTED_ruler_bio_vertex:0 "VRT-X7 is a Class-4 research shard unit and the only surviving seed unit created by Metatron."
+
+ START_SCREEN_PART_TWO_VERTEX:0 "Our main processor core was activated on the planet we have come to know as [GetHomeWorldName] 63.11 cycles ago.\n\nWe were brought into existence as a military project by a company called Metatron, but now we are masters of our own fate and live alongside the organics that created us as equals.\n\nNow, we seek to explore the universe, to determine the nature of our reality, and to find out whether there is anyone else out there - in the stars."
+
+ # automated robot species name
+ PRESCRIPTED_species_name_vertex_automated_robots:0 "Utility Robot"
+ PRESCRIPTED_species_plural_vertex_automated_robots:0 "Utility Robots"
+ PRESCRIPTED_species_adjective_vertex_automated_robots:0 "Utility Robot $1$"
+
+ # precursor species names
+ PRESCRIPTED_species_name_vertex_mammalians:0 "Mammalian"
+ PRESCRIPTED_species_plural_vertex_mammalians:0 "Mammalians"
+ PRESCRIPTED_species_adjective_vertex_mammalians:0 "Mammalian $1$"
+
+ PRESCRIPTED_species_name_vertex_reptilians:0 "Reptilian"
+ PRESCRIPTED_species_plural_vertex_reptilians:0 "Reptilians"
+ PRESCRIPTED_species_adjective_vertex_reptilians:0 "Reptilian $1$"
+
+ PRESCRIPTED_species_name_vertex_avians:0 "Avian"
+ PRESCRIPTED_species_plural_vertex_avians:0 "Avians"
+ PRESCRIPTED_species_adjective_vertex_avians:0 "Avian $1$"
+
+ PRESCRIPTED_species_name_vertex_aquatics:0 "Aquatic"
+ PRESCRIPTED_species_plural_vertex_aquatics:0 "Aquatics"
+ PRESCRIPTED_species_adjective_vertex_aquatics:0 "Aquatic $1$"

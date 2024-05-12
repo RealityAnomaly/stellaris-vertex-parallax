@@ -1,0 +1,70 @@
+utility_component_template = {
+	key = "VERTEX_COMPUTER_SENTIENT"
+	size = small
+	icon = "GFX_ship_part_vertex_computer_sentient"
+	icon_frame = 1
+	power = -25
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = 20
+		}
+	}
+	class_restriction = { shipclass_military shipclass_starbase shipclass_military_special }
+	size_restriction = { frigate destroyer cruiser battleship titan juggernaut crisis_destroyer crisis_cruiser star_eater offspring_destroyer offspring_cruiser offspring_battleship vertex_special_command_platform }
+	component_set = "combat_computers"
+	ship_behavior = "artillery"
+	ai_tags = { artillery artillery_stealth energy_torpedoes energy_torpedoes_stealth }
+	ai_tag_weight = 0
+
+	ship_modifier = {
+		ship_fire_rate_mult = 0.20
+		ship_weapon_range_mult = 0.20
+	}
+
+	ai_weight = {
+		weight = 5
+		modifier = {
+			factor = 0
+			OR = {
+				has_global_flag = ghost_signal_5_flag
+				has_global_flag = ghost_signal_4_flag
+				has_global_flag = ghost_signal_3_flag
+				has_global_flag = ghost_signal_2_flag
+				has_global_flag = ghost_signal_1_flag
+			}
+		}
+	}
+
+	custom_tooltip = "VERTEX_COMPUTER_SENTIENT_TOOLTIP"
+
+	# requirements section
+	prerequisites = { "tech_vertex_somnium" }
+}
+
+# start of handling logic for ACP-support
+# scripted_action_name = on_vertex_special_orbital_protection_adding
+# scripted_action_on_cancel = on_vertex_special_orbital_protection_removing
+# scripted_action_activity_key = vertex_special_orbital_protection_activity_key
+# scripted_action_context_menu_name = vertex_special_orbital_protection_context_menu
+# scripted_action_tooltip = vertex_special_orbital_protection_tooltip
+# scripted_action_icon = GFX_fleet_order_button_assist_research
+
+# scripted_action_possible = {
+# 	NOR = {
+# 		has_planet_flag = vertex_special_orbital_protection
+# 		has_planet_flag = vertex_special_orbital_protection_spawn
+# 	}
+# }
+
+# # scripted_action_button_possible = {
+# # 	NOT = { has_planet_flag = vertex_special_orbital_protection }
+# # }
+
+# scripted_action_finished = {
+# 	NOT = {
+# 		any_fleet_in_orbit = {
+# 			is_ship_size = vertex_special_command_platform
+# 		}
+# 	}
+# }

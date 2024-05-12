@@ -1,0 +1,4 @@
+# 10x normal L7, requires singularity reactors
+@power_vertex_metatron_S1 = -750
+@power_vertex_metatron_M1 = -1500
+@power_vertex_metatron_L1 = -3000

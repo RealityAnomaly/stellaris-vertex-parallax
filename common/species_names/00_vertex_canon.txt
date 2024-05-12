@@ -1,0 +1,9 @@
+MACHINE = {
+	shard_unit = {
+		name = SPEC_Shard
+		plural = SPEC_Shard_pl
+		home_planet = SPEC_Shard_planet
+		home_system = SPEC_Shard_system
+		name_list = "VERTEX"
+	}
+}

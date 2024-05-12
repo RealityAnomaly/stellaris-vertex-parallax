@@ -1,0 +1,119 @@
+ship_design = {
+	name = "VERTEX_SHIP_Special_ACP"
+	ship_size = vertex_special_command_platform
+	is_event_design = yes
+	is_special_buildable = no
+
+	section = {
+		template = "VERTEX_ACP_BOW"
+		slot = "bow"
+
+		component = {
+			slot = "TITANIC_01"
+			template = "ENERGY_VERTEX_PHANTOM_HAMMER"
+		}
+
+		component = {
+			slot = "LARGE_UTILITY_1"
+			template = "LARGE_VERTEX_DCA_DEFLECTOR"
+		}
+		component = {
+			slot = "LARGE_UTILITY_2"
+			template = "LARGE_VERTEX_DCA_DEFLECTOR"
+		}
+		component = {
+			slot = "LARGE_UTILITY_3"
+			template = "LARGE_VERTEX_DCA_DEFLECTOR"
+		}
+		component = {
+			slot = "LARGE_UTILITY_4"
+			template = "LARGE_VERTEX_DCA_DEFLECTOR"
+		}
+		component = {
+			slot = "LARGE_UTILITY_5"
+			template = "LARGE_VERTEX_DCA_DEFLECTOR"
+		}
+		component = {
+			slot = "LARGE_UTILITY_6"
+			template = "LARGE_VERTEX_DCA_DEFLECTOR"
+		}
+	}
+	section = {
+		template = "VERTEX_ACP_MID"
+		slot = "mid"
+
+		component = {
+			slot = "LARGE_GUN_01"
+			template = "ENERGY_VERTEX_OBLIVION_LARGE"
+		}
+		component = {
+			slot = "LARGE_GUN_02"
+			template = "ENERGY_VERTEX_OBLIVION_LARGE"
+		}
+		component = {
+			slot = "LARGE_GUN_03"
+			template = "ENERGY_VERTEX_OBLIVION_LARGE"
+		}
+		component = {
+			slot = "LARGE_GUN_04"
+			template = "ENERGY_VERTEX_OBLIVION_LARGE"
+		}
+
+		component = {
+			slot = "LARGE_UTILITY_1"
+			template = "LARGE_VERTEX_VOIMA_ARMOR"
+		}
+		component = {
+			slot = "LARGE_UTILITY_2"
+			template = "LARGE_VERTEX_VOIMA_ARMOR"
+		}
+		component = {
+			slot = "LARGE_UTILITY_3"
+			template = "LARGE_VERTEX_VOIMA_ARMOR"
+		}
+		component = {
+			slot = "LARGE_UTILITY_4"
+			template = "LARGE_VERTEX_VOIMA_ARMOR"
+		}
+		component = {
+			slot = "LARGE_UTILITY_5"
+			template = "LARGE_VERTEX_VOIMA_ARMOR"
+		}
+		component = {
+			slot = "LARGE_UTILITY_6"
+			template = "LARGE_VERTEX_VOIMA_ARMOR"
+		}
+	}
+	section = {
+		template = "VERTEX_ACP_STERN"
+		slot = "stern"
+
+		component = {
+			slot = "LARGE_GUN_01"
+			template = "LARGE_ARCHAEO_KINETIC"
+		}
+		component = {
+			slot = "LARGE_GUN_02"
+			template = "LARGE_ARCHAEO_KINETIC"
+		}
+
+		component = {
+			slot = "AUX_UTILITY_1"
+			template = "ARMOR_HARDENER_2"
+		}
+		component = {
+			slot = "AUX_UTILITY_2"
+			template = "LARGE_VERTEX_DCA_PHASER"
+		}
+		component = {
+			slot = "AUX_UTILITY_3"
+			template = "ENERGY_VERTEX_FIRESTORM"
+		}
+	}
+	required_component="VERTEX_TITAN_SINGULARITY_REACTOR"
+	#required_component="JUMP_DRIVE_1" IMPORTANT: NO FTL drive!!
+	required_component="VERTEX_COMPUTER_SENTIENT"
+	required_component="TITAN_SHIP_THRUSTER_2" # ion thrusters are at the lore tech level
+	required_component="SENSOR_4"
+	required_component="SHIP_AURA_TARGETING_GRID"
+}

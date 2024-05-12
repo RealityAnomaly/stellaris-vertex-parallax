@@ -1,0 +1,501 @@
+vertex_start_effect_proxima = {
+	capital_scope = {
+		# remove existing blockers
+		# set_planet_size = 30
+		# remove_deposit = d_great_pacific_garbage_patch
+		#clear_deposits = yes
+		
+		# make sure we have enough pops to sustain districts
+		# while = {
+		# 	count = 8
+		# 	create_pop = {
+		# 		species = owner
+		# 	}
+		# }
+
+		# # add enough city districts to support buildings
+		# while = {
+		# 	count = 1
+		# 	add_district_and_planet_size_if_needed_effect = {
+		# 		district = district_city
+		# 	}
+		# }
+
+		# # make sure we have enough energy and alloy production to sustain initial pops
+		# while = {
+		# 	count = 3
+		# 	add_district_and_planet_size_if_needed_effect = {
+		# 		district = district_generator
+		# 	}
+		# }
+
+		# while = {
+		# 	count = 8
+		# 	add_district_and_planet_size_if_needed_effect = {
+		# 		district = district_mining
+		# 	}
+		# }
+
+		# while = {
+		# 	count = 5
+		# 	add_district_and_planet_size_if_needed_effect = {
+		# 		district = district_industrial
+		# 	}
+		# }
+
+		# while = {
+		# 	count = 1
+		# 	add_district_and_planet_size_if_needed_effect = {
+		# 		district = district_farming
+		# 	}
+		# }
+
+
+		# handle creation of special ACP fleet
+		owner = {
+			create_leader = {
+				name = "VERTEX_LEADER_Special_ACP"
+				species = owner_main_species
+				class = commander
+				skill = 5
+				traits = {
+					trait = leader_trait_restrained
+					trait = leader_trait_unyielding
+					trait = leader_trait_survivalist
+					trait = leader_trait_commanding_presence
+					trait = subclass_commander_admiral
+				}
+				effect = {
+					set_leader_flag = should_not_have_upkeep
+				}
+				event_leader = yes
+				immortal = yes
+				set_age = 23
+			}
+		}
+
+		create_fleet = {
+			name = "VERTEX_FLEET_Special1"
+			effect = {
+				set_owner = prev
+				create_ship = {
+					name = "VERTEX_SHIP_Special_ACP_Name1"
+					design = "VERTEX_SHIP_Special_ACP"
+					upgradable = yes
+					#graphical_culture = "ai_01"
+				}
+				set_location = {
+					target = prev
+					distance = 0
+					angle = random
+				}
+				set_fleet_stance = passive
+				set_aggro_range_measure_from = self
+				set_aggro_range = 350
+
+				assign_leader = last_created_leader
+	
+				auto_move_to_planet = {
+					target = prev
+					clear_auto_move_on_arrival = yes
+				}
+			}
+			settings = {
+				can_upgrade = yes
+				can_disband = no
+				can_change_composition = no
+				can_change_leader = no
+				uses_naval_capacity = no
+				spawn_debris = no
+			}
+		}
+	}
+}
+
+vertex_start_effect_proxima_init_planet = {
+	clear_deposits = yes
+
+	# hack because the ACP takes some time to start orbiting the planet
+	set_planet_flag = vertex_special_orbital_protection_freeze
+
+	# add deposits
+	add_deposit = d_machine_minerals
+	add_deposit = d_resource_consolidation_1
+
+	# set up districts: total - 27 jobs
+	# 3 jobs
+	while = {
+		count = 2
+		add_district_and_planet_size_if_needed_effect = {
+			district = district_nexus
+		}
+	}
+
+	# 6 jobs
+	while = {
+		count = 3
+		add_district_and_planet_size_if_needed_effect = {
+			district = district_industrial
+		}
+	}
+
+	while = {
+		count = 4
+		add_district_and_planet_size_if_needed_effect = {
+			district = district_generator_uncapped
+		}
+	}
+
+	# 6 jobs
+	add_building = building_machine_capital # 6 jobs
+	add_building = building_machine_assembly_plant # 1 job
+	add_building = building_uplink_node # 2 jobs
+	add_building = building_research_lab_1 # 2 jobs
+
+	# for benevolent machines
+	add_building = building_vertex_outsider_housing
+
+	# create extra buildings that are added to starting planet
+	add_building = building_vertex_repurposed_tombaugh_reactor
+	add_building = building_vertex_nanobot_fabricator
+
+	# starts ruined - can be fixed in the late mid-game
+	add_building = building_vertex_particle_accelerator
+	ruin_building = building_vertex_particle_accelerator
+
+	add_district_and_planet_size_if_needed_effect = {
+		district = district_mining_uncapped
+	}
+
+	solar_system = {
+		every_system_planet = {
+			limit = {
+				colonizable_planet = no
+				is_star = no
+			}
+			clear_deposits = yes
+		}
+		every_system_planet = {
+			limit = {
+				is_asteroid = yes
+			}
+			remove_planet = yes
+		}
+		every_system_planet = {
+			limit = {
+				colonizable_planet = no
+				is_star = no
+				is_asteroid = no
+				NOT = { is_planet_class = pc_gas_giant }
+			}
+			change_pc = pc_broken
+		}
+		every_system_planet = {
+			limit = {
+				colonizable_planet = no
+				is_star = no
+				is_planet_class = pc_gas_giant
+			}
+			change_pc = pc_molten
+			add_modifier = { modifier = chthonian_planet }
+			every_moon = {
+				limit = {
+					colonizable_planet = no
+				}
+				remove_planet = yes
+			}
+			while = {
+				limit = {
+					planet_size >= 20
+				}
+				change_planet_size = -6
+			}
+		}
+	}
+}
+
+vertex_start_effect_proxima_generate_machine_pops = {
+	capital_scope = {
+		# add necessary pops
+		# 11 sentient (3 already created)
+		while = {
+			count = 11
+			create_pop = {
+				species = owner_main_species
+				#ethos = { ethic = ethic_gestalt_consciousness }
+
+				# depends on the ethos of the pop itself
+				# ethos = {
+				# 	ethic = "ethic_gestalt_consciousness"
+				# 	#ethic = "ethic_pacifist"
+				# 	# ethic = "ethic_egalitarian"
+				# 	# ethic = "ethic_materialist"
+				# }
+			}
+		}
+
+		# 24 non-sentient
+		while = {
+			count = 22
+			create_pop = {
+				#species = owner_main_species
+				species = event_target:global_vertex_species_automated_robots
+				#ethos = { ethic = ethic_gestalt_consciousness }
+			}
+		}
+
+		# the gods of stellaris dictate this to be here
+		event_target:global_vertex_species_automated_robots = {
+			set_military_service_type = {
+				country = root.owner
+				type = military_service_none
+			}
+		}
+	}
+}
+
+vertex_start_effect_proxima_generate_human_pops = {
+	capital_scope = {
+		create_species = {
+			class = "HUM"
+			portrait = "human"
+			name = "PRESCRIPTED_species_name_humans1"
+			plural = "PRESCRIPTED_species_plural_humans1"
+			adjective = "PRESCRIPTED_species_adjective_humans1"
+			name_list = "HUMAN1"
+	
+			homeworld = prev
+			
+			traits = {
+				trait = trait_adaptive
+				trait = trait_nomadic
+				trait = trait_wasteful
+				#trait = trait_vertex_synergistic_precursor
+				trait = trait_cybernetic
+			}
+	
+			effect = {
+				save_global_event_target_as = global_vertex_species_humans
+			}
+		}
+	
+		last_created_species = {
+			set_citizenship_type = {
+				country = root
+				type = citizenship_vertex_dependent
+			}
+		}
+	
+		while = {
+			count = 1
+			create_pop = {
+				species = last_created_species
+				ethos = random
+			}
+		}
+	}
+}
+
+vertex_start_effect_proxima_generate_mammalian_pops = {
+	capital_scope = {
+		create_species = {
+			class = "MAM"
+			portrait = "mam3"
+			name = "PRESCRIPTED_species_name_vertex_mammalians"
+			plural = "PRESCRIPTED_species_plural_vertex_mammalians"
+			adjective = "PRESCRIPTED_species_adjective_vertex_mammalians"
+			name_list = "HUMAN1"
+	
+			homeworld = prev
+			
+			traits = {
+				trait = trait_vertex_bioengineered
+				trait = trait_cybernetic
+			}
+	
+			effect = {
+				save_global_event_target_as = global_vertex_species_mammalians
+			}
+		}
+
+		last_created_species = {
+			set_citizenship_type = {
+				country = root
+				type = citizenship_vertex_dependent
+			}
+		}
+	
+		while = {
+			count = 1
+			create_pop = {
+				species = last_created_species
+				ethos = random
+			}
+		}
+	}
+}
+
+vertex_start_effect_proxima_generate_reptilian_pops = {
+	capital_scope = {
+		create_species = {
+			class = "REP"
+			portrait = "rep9"
+			name = "PRESCRIPTED_species_name_vertex_reptilians"
+			plural = "PRESCRIPTED_species_plural_vertex_reptilians"
+			adjective = "PRESCRIPTED_species_adjective_vertex_reptilians"
+			name_list = "HUMAN1"
+	
+			homeworld = prev
+			
+			traits = {
+				trait = trait_vertex_bioengineered
+				trait = trait_cybernetic
+			}
+	
+			effect = {
+				save_global_event_target_as = global_vertex_species_reptilians
+			}
+		}
+
+		last_created_species = {
+			set_citizenship_type = {
+				country = root
+				type = citizenship_vertex_dependent
+			}
+		}
+	
+		while = {
+			count = 1
+			create_pop = {
+				species = last_created_species
+				ethos = random
+			}
+		}
+	}
+}
+
+vertex_start_effect_proxima_generate_avian_pops = {
+	capital_scope = {
+		create_species = {
+			class = "AVI"
+			portrait = "synth01"
+			name = "PRESCRIPTED_species_name_vertex_avians"
+			plural = "PRESCRIPTED_species_plural_vertex_avians"
+			adjective = "PRESCRIPTED_species_adjective_vertex_avians"
+			name_list = "HUMAN1"
+	
+			homeworld = prev
+			
+			traits = {
+				trait = trait_vertex_bioengineered
+				trait = trait_cybernetic
+			}
+	
+			effect = {
+				save_global_event_target_as = global_vertex_species_avians
+			}
+		}
+
+		last_created_species = {
+			set_citizenship_type = {
+				country = root
+				type = citizenship_vertex_dependent
+			}
+		}
+	
+		while = {
+			count = 1
+			create_pop = {
+				species = last_created_species
+				ethos = random
+			}
+		}
+	}
+}
+
+vertex_start_effect_proxima_generate_aquatic_pops = {
+	capital_scope = {
+		create_species = {
+			class = "AQUATIC"
+			portrait = "aqu1"
+			name = "PRESCRIPTED_species_name_vertex_aquatics"
+			plural = "PRESCRIPTED_species_plural_vertex_aquatics"
+			adjective = "PRESCRIPTED_species_adjective_vertex_aquatics"
+			name_list = "HUMAN1"
+	
+			homeworld = prev
+			
+			traits = {
+				trait = trait_vertex_bioengineered
+				trait = trait_cybernetic
+			}
+	
+			effect = {
+				save_global_event_target_as = global_vertex_species_aquatics
+			}
+		}
+
+		last_created_species = {
+			set_citizenship_type = {
+				country = root
+				type = citizenship_vertex_dependent
+			}
+		}
+	
+		while = {
+			count = 1
+			create_pop = {
+				species = last_created_species
+				ethos = random
+			}
+		}
+	}
+}
+
+vertex_start_effect_proxima_setup_species_citizenship = {
+	# set up living standard
+	owner_main_species = {
+		set_living_standard = {
+			type = living_standard_utopian
+			country = root.owner
+		}
+	}
+
+	# every_owned_species = {
+	# 	limit = {
+	# 		is_sapient = yes
+	# 		has_citizenship_type = { type = citizenship_slavery country = root.owner }
+	# 	}
+	# 	set_citizenship_type = { type = citizenship_vertex_dependent country = root.owner }
+
+	# 	# create one pop of each on
+	# 	capital_scope = {
+	# 		create_pop = {
+	# 			species = prev
+	# 			ethos = random
+	# 		}
+	# 	}
+	# }
+}
+
+check_pop_traits_vertex = {
+	if = {
+		limit = { is_robot_pop = yes }
+		if = {
+			limit = { has_trait = trait_vertex_polyvore }
+			prev = {
+				change_variable = { which = minerals_mult_planet_pop value = -0.05 }
+			}
+		}
+	}
+
+	if = {
+		limit = { is_robot_pop = yes }
+		if = {
+			limit = { has_trait = trait_vertex_polyvore }
+			prev = {
+				change_variable = { which = consumer_goods_mult_planet_pop value = -0.1 }
+			}
+		}
+	}
+}

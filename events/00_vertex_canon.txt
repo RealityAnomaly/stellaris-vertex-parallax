@@ -1,0 +1,158 @@
+namespace = vertex_canon_events
+
+planet_event = {
+	# On game start event
+	id = vertex_canon_events.40 # empire_init_capital_planet
+	hide_window = yes
+	is_triggered_only = yes
+
+	# set special_start_planet
+	immediate = {
+		if = {
+			limit = {
+				owner = {
+					has_origin = origin_metatron_shard_unit
+				}
+			}
+
+			#generate_start_deposits_and_blockers = yes
+			#generate_start_buildings_and_districts = yes
+
+			# we init pops ourselves
+			vertex_start_effect_proxima_init_planet = yes
+
+			# run the final pass
+			generate_home_planet_final_pass = yes
+		}
+	}
+}
+
+event = {
+  id = vertex_canon_events.80 # on_game_start
+	is_triggered_only = yes
+  hide_window = yes
+
+	immediate = {}
+}
+
+event = {
+	id = vertex_canon_events.90 # on_game_start_country
+	is_triggered_only = yes
+	hide_window = yes
+
+	trigger = {
+		has_country_flag = vertex_country_proxima
+	}
+	
+	immediate = {
+		vertex_start_effect_proxima = yes
+
+		vertex_start_effect_proxima_generate_machine_pops = yes
+		vertex_start_effect_proxima_generate_human_pops = yes
+		vertex_start_effect_proxima_generate_mammalian_pops = yes
+		vertex_start_effect_proxima_generate_reptilian_pops = yes
+		vertex_start_effect_proxima_generate_avian_pops = yes
+		vertex_start_effect_proxima_generate_aquatic_pops = yes
+
+		vertex_start_effect_proxima_setup_species_citizenship = yes
+	}
+}
+
+event = {
+	id = vertex_canon_events.200 # on_ruler_created
+	is_triggered_only = yes
+	hide_window = yes
+
+	trigger = {
+		has_country_flag = vertex_country_proxima
+		FROM = { is_ruler = yes }
+	}
+
+	immediate = {
+		from = {
+			#add_trait_no_notify = leader_trait_nervous
+			#add_trait_no_notify = leader_trait_vertex_erratic_morality_core
+		}
+	}
+}
+
+# Begin fortifying the target planet
+planet_event = {
+	id = vertex_canon_events.250
+	hide_window = yes
+	is_triggered_only = no
+
+	trigger = {
+		OR = {
+			any_fleet_in_orbit = {
+				is_ship_size = vertex_special_command_platform
+			}
+			has_planet_flag = vertex_special_orbital_protection_freeze
+		}
+		
+		owner = {
+			# don't protect the enemy when we are bombing them!
+			NOT = { is_at_war_with = from.owner }
+		}
+		NOT = { has_planet_flag = vertex_special_orbital_protection }
+	}
+
+	immediate = {
+		#spawn_planet_temperature_effect = yes
+		set_planet_flag = vertex_special_orbital_protection
+		add_modifier = {
+			modifier = vertex_special_orbital_protection_modifier
+			days = -1
+		}
+	}
+
+	mean_time_to_happen = { days = 1 }
+}
+
+# Stop fortifying the target planet
+planet_event = {
+	id = vertex_canon_events.251
+	hide_window = yes
+	is_triggered_only = no
+
+	trigger = {
+		NOT = {
+			any_fleet_in_orbit = {
+				is_ship_size = vertex_special_command_platform
+			}
+		}
+		NOT = {
+			has_planet_flag = vertex_special_orbital_protection_freeze
+		}
+		has_planet_flag = vertex_special_orbital_protection
+	}
+
+	immediate = {
+		remove_planet_flag = vertex_special_orbital_protection
+		remove_modifier = vertex_special_orbital_protection_modifier
+	}
+
+	mean_time_to_happen = { days = 1 }
+}
+
+# Planet fortification initialiser
+planet_event = {
+	id = vertex_canon_events.252
+	hide_window = yes
+	is_triggered_only = no
+
+	trigger = {
+		AND = {
+			any_fleet_in_orbit = {
+				is_ship_size = vertex_special_command_platform
+			}
+			has_planet_flag = vertex_special_orbital_protection_freeze
+		}
+	}
+
+	immediate = {
+		remove_planet_flag = vertex_special_orbital_protection_freeze
+	}
+
+	mean_time_to_happen = { days = 1 }
+}

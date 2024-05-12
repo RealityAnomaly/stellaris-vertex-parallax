@@ -1,0 +1,243 @@
+building_vertex_black_mountain = {
+	base_buildtime = @b1_time
+	category = government
+
+	can_demolish = no
+	can_be_disabled = no
+
+	base_cap_amount = 1
+	empire_limit = { base = 1 }
+	exempt_from_ai_planet_specialization = no
+
+	potential = {
+		exists = owner
+		owner = {
+			has_country_flag = vertex_country_proxima
+		}
+	}
+
+	destroy_trigger = {
+		exists = owner
+		owner = {
+			NOT = {
+				has_country_flag = vertex_country_proxima
+			}
+		}
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = @b1_minerals
+		}
+		produces = {
+			unity = 2
+			physics_research = 2
+		}
+		upkeep = {
+			energy = @b1_upkeep
+		}
+	}
+
+	show_tech_unlock_if = {
+		has_country_flag = vertex_country_proxima
+	}
+
+	triggered_desc = {
+		text = building_vertex_black_mountain_effect_desc
+	}
+}
+
+building_vertex_particle_accelerator = {
+	category = resource
+
+	can_demolish = yes
+	can_be_disabled = yes
+
+	base_cap_amount = 1 # one buildable per planet
+	#empire_limit = { base = 1 }
+	exempt_from_ai_planet_specialization = no
+
+	potential = { always = no } # TODO: implement
+
+	destroy_trigger = {
+		exists = owner
+		owner = {
+			NOT = {
+				has_country_flag = vertex_country_proxima
+			}
+		}
+	}
+
+	base_buildtime = @b4_time
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = @b4_minerals
+		}
+		produces = {
+			vertex_singularity_cores = 0.083 # 1 every 12 months
+		}
+		upkeep = {
+			energy = 10
+			physics_research = 5
+		}
+	}
+
+	prerequisites = {
+		"tech_vertex_singularity_production"
+	}
+
+	# resources = {
+	# 	category = planet_buildings
+	# 	cost = {
+	# 		minerals = @b3_minerals
+	# 		exotic_gases = @b3_rare_cost
+	# 	}
+	# 	upkeep = {
+	# 		energy = @b3_upkeep
+	# 		exotic_gases = @b3_rare_upkeep
+	# 	}
+	# 	upkeep = {
+	# 		trigger = {
+	# 			owner = {
+	# 				is_galactic_community_member = yes
+	# 			}
+	# 			is_active_resolution = "resolution_galacticstudies_extradimensional_experimentation"
+	# 			planet = {
+	# 				has_modifier = pm_extradimensional_experimentation
+	# 			}
+	# 		}
+	# 		sr_zro = 1
+	# 	}
+	# }
+
+	#prerequisites = {
+	#	"tech_basic_science_lab_3"
+	#}
+}
+
+building_vertex_nanobot_fabricator = {
+	category = resource
+
+	can_demolish = yes
+	can_be_disabled = yes
+
+	#base_cap_amount = 1 # one buildable per planet
+	#empire_limit = { base = 1 }
+	exempt_from_ai_planet_specialization = no
+
+	destroy_trigger = {
+		exists = owner
+		owner = {
+			NOT = {
+				has_country_flag = vertex_country_proxima
+			}
+		}
+	}
+
+	base_buildtime = @b4_time
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = @b4_minerals
+		}
+		produces = {
+			nanites = 0.25
+		}
+		upkeep = {
+			alloys = 2
+			energy = 5
+			physics_research = 3
+		}
+	}
+
+	prerequisites = {
+		"tech_vertex_nanobots"
+	}
+}
+
+building_vertex_tombaugh_reactor = {
+	category = resource
+
+	can_demolish = no # no going back...
+	can_be_disabled = no
+
+	base_cap_amount = 5
+	empire_limit = { base = 5 }
+	exempt_from_ai_planet_specialization = yes
+
+	potential = { always = no } # special event building, not constructible by player
+
+	destroy_trigger = {
+		exists = owner
+		owner = {
+			NOT = {
+				has_country_flag = vertex_country_proxima
+			}
+		}
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = @b1_minerals
+			vertex_singularity_cores = 1
+		}
+		produces = {
+			sr_vertex_chaotic_matter = 1
+			energy = 500
+		}
+		upkeep = {
+			alloys = 50
+			physics_research = 20
+		}
+	}
+
+	triggered_desc = {
+		text = building_vertex_tombaugh_reactor_effect_desc
+	}
+}
+
+building_vertex_repurposed_tombaugh_reactor = {
+	category = resource
+
+	can_demolish = no # if so, the player could fuck themselves over
+	can_be_disabled = yes
+
+	base_cap_amount = 1
+	empire_limit = { base = 1 }
+	exempt_from_ai_planet_specialization = no
+
+	potential = { always = no } # once-off spawned building
+
+	destroy_trigger = {
+		exists = owner
+		owner = {
+			NOT = {
+				has_country_flag = vertex_country_proxima
+			}
+		}
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = @b1_minerals
+		}
+		produces = {
+			sr_dark_matter = 1
+			energy = 2
+		}
+		upkeep = {
+			alloys = 2
+			physics_research = 3
+		}
+	}
+
+	triggered_desc = {
+		text = building_vertex_repurposed_tombaugh_reactor_effect_desc
+	}
+}

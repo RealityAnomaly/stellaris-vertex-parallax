@@ -1,0 +1,88 @@
+spriteTypes = {
+	spriteType = {
+		name = "GFX_ship_part_vertex_phantom_hammer"
+		texturefile = "gfx/interface/icons/ship_parts/ship_part_vertex_phantom_hammer.dds"
+	}
+
+	spriteType = {
+		name = "GFX_ship_part_vertex_firestorm"
+		texturefile = "gfx/interface/icons/ship_parts/ship_part_vertex_firestorm.dds"
+	}
+
+	spriteType = {
+		name = "GFX_ship_part_vertex_voima_armor"
+		texturefile = "gfx/interface/icons/ship_parts/ship_part_vertex_voima_armor.dds"
+	}
+
+	spriteType = {
+		name = "GFX_ship_part_vertex_metatron_shield"
+		texturefile = "gfx/interface/icons/ship_parts/ship_part_vertex_metatron_shield.dds"
+	}
+
+	spriteType = {
+		name = "GFX_ship_part_vertex_metatron_cloak"
+		texturefile = "gfx/interface/icons/ship_parts/ship_part_vertex_metatron_cloak.dds"
+	}
+
+	spriteType = {
+		name = "GFX_ship_part_vertex_singularity_reactor"
+		texturefile = "gfx/interface/icons/ship_parts/ship_part_vertex_singularity_reactor.dds"
+	}
+
+	spriteType = {
+		name = "GFX_ship_part_vertex_computer_sentient"
+		texturefile = "gfx/interface/icons/ship_parts/computers/ship_part_computer_vertex_shard.dds"
+	}
+
+	# Bombardment stance icons
+	spriteType = {
+		name = "GFX_planet_modifier_ground_support_vertex_grid"
+		sprite_sheet_sprite_type = "GFX_planet_view_bombarded"
+		default_frame = 1
+	}
+	spriteType = {
+		name = "GFX_planet_modifier_ground_support_vertex_firestorm"
+		sprite_sheet_sprite_type = "GFX_planet_view_bombarded"
+		default_frame = 3
+	}
+
+	spriteType = {
+		name = "GFX_fleet_order_button_ground_support_vertex_grid"
+		texturefile = "gfx/interface/fleet_view/fleet_task_ground_support_vertex_grid_action.dds"
+		effectFile = "gfx/FX/buttonstate.shader"
+		noOfFrames = 3
+		animation = {
+			animationmaskfile = "gfx/interface/fleet_view/fleet_task_button_mask.dds"
+			animationtexturefile = "gfx/interface/fleet_view/action_button_texture.dds"
+			animationrotation = 180.0
+			animationlooping = yes
+			animationtime = 12.0
+			animationdelay = 0.0
+			animationblendmode = "overlay"       #add, multiply, overlay
+			animationtype = "scrolling"      #scrolling, rotating, pulsing
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+			animationframes = { 1 2 3 }
+		}
+	}
+
+	spriteType = {
+		name = "GFX_fleet_order_button_ground_support_firestorm"
+		texturefile = "gfx/interface/fleet_view/fleet_task_ground_support_armageddon_action.dds"
+		effectFile = "gfx/FX/buttonstate.shader"
+		noOfFrames = 3
+		animation = {
+			animationmaskfile = "gfx/interface/fleet_view/fleet_task_button_mask.dds"
+			animationtexturefile = "gfx/interface/fleet_view/action_button_texture.dds"
+			animationrotation = 180.0
+			animationlooping = yes
+			animationtime = 12.0
+			animationdelay = 0.0
+			animationblendmode = "overlay"       #add, multiply, overlay
+			animationtype = "scrolling"      #scrolling, rotating, pulsing
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+			animationframes = { 1 2 3 }
+		}
+	}
+}

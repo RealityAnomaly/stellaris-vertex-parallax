@@ -1,0 +1,264 @@
+# these are all tier 0 technologies because most will be granted at the start of the game
+# and we don't want to affect the tech tree by unlocking higher tiers early
+tech_vertex_somnium = {
+	tier = 0
+	area = physics
+
+	is_rare = yes
+	category = { computing }
+	start_tech = yes
+
+	# requirements section
+	cost = @tier4cost2
+	
+	weight = @tier4weight2
+	weight_modifier = {
+		factor = 0
+	}
+
+	potential = {
+		has_country_flag = vertex_country_proxima
+	}
+	starting_potential = {
+		has_country_flag = vertex_country_proxima
+	}
+
+	# AI control section
+	ai_update_type = all
+	ai_weight = {}
+}
+
+tech_vertex_containment = {
+	tier = 0
+	area = physics
+
+	is_rare = yes
+	category = { field_manipulation }
+	start_tech = yes
+
+	# requirements section
+	cost = @tier4cost2
+	
+	weight = @tier4weight2
+	weight_modifier = {
+		factor = 0
+	}
+
+	potential = {
+		has_country_flag = vertex_country_proxima
+	}
+	starting_potential = {
+		has_country_flag = vertex_country_proxima
+	}
+
+	# AI control section
+	ai_update_type = all
+	ai_weight = {}
+}
+
+tech_vertex_singularity_production = {
+	tier = 0
+	area = physics
+
+	is_rare = yes
+	category = { field_manipulation }
+	start_tech = yes
+
+	# requirements section
+	cost = @tier4cost2
+	
+	weight = @tier4weight2
+	weight_modifier = {
+		factor = 0
+	}
+
+	potential = {
+		has_country_flag = vertex_country_proxima
+	}
+	starting_potential = {
+		has_country_flag = vertex_country_proxima
+	}
+
+	prerequisites = { "tech_vertex_containment" }
+
+	# AI control section
+	ai_update_type = all
+	ai_weight = {}
+}
+
+tech_vertex_annihilation_weapons = {
+	tier = 0
+	area = physics
+
+	is_rare = no
+	category = { field_manipulation }
+	start_tech = yes
+
+	# requirements section
+	cost = @tier4cost2
+	
+	weight = @tier4weight2
+	weight_modifier = {
+		factor = 0
+	}
+
+	potential = {
+		has_country_flag = vertex_country_proxima
+	}
+	starting_potential = {
+		has_country_flag = vertex_country_proxima
+	}
+
+	prerequisites = { "tech_vertex_singularity_production" }
+
+	# AI control section
+	ai_update_type = all
+	ai_weight = {}
+}
+
+tech_vertex_nanofield = {
+	tier = 0
+	area = physics
+
+	is_rare = yes
+	category = { field_manipulation }
+	start_tech = yes
+
+	# requirements section
+	cost = @tier4cost2
+	
+	weight = @tier4weight2
+	weight_modifier = {
+		factor = 0
+	}
+
+	potential = {
+		OR = {
+			has_country_flag = vertex_country_proxima
+			has_country_flag = vertex_country_tasen
+			has_country_flag = vertex_country_komato
+		}
+	}
+	starting_potential = {
+		OR = {
+			has_country_flag = vertex_country_tasen
+			has_country_flag = vertex_country_komato
+		}
+	}
+
+	prerequisites = { "tech_vertex_nanobots" }
+
+	# AI control section
+	ai_update_type = all
+	ai_weight = {}
+}
+
+tech_vertex_nanofield_personal = {
+	tier = 0
+	area = physics
+
+	is_rare = no
+	category = { field_manipulation }
+	start_tech = yes
+
+	# requirements section
+	cost = @tier4cost2
+	
+	weight = @tier4weight2
+	weight_modifier = {
+		factor = 0
+	}
+
+	potential = {
+		OR = {
+			has_country_flag = vertex_country_proxima
+			has_country_flag = vertex_country_tasen
+			has_country_flag = vertex_country_komato
+		}
+	}
+	starting_potential = {
+		OR = {
+			has_country_flag = vertex_country_tasen
+			has_country_flag = vertex_country_komato
+		}
+	}
+
+	prerequisites = { "tech_vertex_nanofield" }
+
+	# AI control section
+	ai_update_type = all
+	ai_weight = {}
+}
+
+tech_vertex_nanofield_ship = {
+	tier = 0
+	area = physics
+
+	is_rare = no
+	category = { field_manipulation }
+	start_tech = yes
+
+	# requirements section
+	cost = @tier4cost2
+	
+	weight = @tier4weight2
+	weight_modifier = {
+		factor = 0
+	}
+
+	potential = {
+		OR = {
+			has_country_flag = vertex_country_proxima
+			has_country_flag = vertex_country_tasen
+			has_country_flag = vertex_country_komato
+		}
+	}
+	starting_potential = {
+		OR = {
+			has_country_flag = vertex_country_komato
+		}
+	}
+
+	prerequisites = { "tech_vertex_nanofield" }
+
+	# AI control section
+	ai_update_type = all
+	ai_weight = {}
+}
+
+tech_vertex_nanofield_planetary = {
+	tier = 0
+	area = physics
+
+	is_rare = no
+	category = { field_manipulation }
+	start_tech = yes
+
+	# requirements section
+	cost = @tier4cost2
+	
+	weight = @tier4weight2
+	weight_modifier = {
+		factor = 0
+	}
+
+	potential = {
+		OR = {
+			has_country_flag = vertex_country_proxima
+			has_country_flag = vertex_country_tasen
+			has_country_flag = vertex_country_komato
+		}
+	}
+	starting_potential = {
+		OR = {
+			has_country_flag = vertex_country_tasen
+			has_country_flag = vertex_country_komato
+		}
+	}
+
+	prerequisites = { "tech_vertex_nanofield" }
+
+	# AI control section
+	ai_update_type = all
+	ai_weight = {}
+}

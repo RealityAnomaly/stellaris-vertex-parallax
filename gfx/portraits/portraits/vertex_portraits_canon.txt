@@ -1,0 +1,48 @@
+portraits = {
+	shard_unit_wolf = {
+		greeting_sound = "robot_mammalian_greetings"
+		texturefile = "gfx/models/portraits/shard_unit_wolf.dds"
+	}
+}
+
+portrait_groups = {
+	shard_unit = {
+		default = shard_unit_wolf
+		game_setup = {
+			add = {
+				portraits = {
+					# shard_unit_wolf
+				}
+			}
+		}
+		species = {
+			add = {
+				portraits = {
+					# shard_unit_wolf
+				}
+			}
+		}
+		pop = {
+			add = {
+				portraits = {
+					# shard_unit_wolf
+				}
+			}
+		}
+		leader = {
+			add = {
+				portraits = {
+					# shard_unit_wolf
+				}
+			}
+		}
+		ruler = {
+			add = {
+				portraits = {
+					# acp_ai_central_core
+					# shard_unit_wolf
+				}
+			}
+		}
+	}
+}

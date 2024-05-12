@@ -1,0 +1,50 @@
+empire_init_capital_planet = {
+	events = {
+		vertex_canon_events.40
+	}	
+}
+
+on_game_start = {
+  events = {
+    vertex_canon_events.80
+  }
+}
+
+on_game_start_country = {
+	events = {
+		vertex_canon_events.90
+	}
+}
+
+# on_modification_complete = {
+#   events = {
+#     vertex_canon_events.1
+# 	  vertex_canon_events.2
+#   }
+# }
+
+# on_yearly_pulse = {
+#   events = {
+#     vertex_canon_events.1
+# 	  vertex_canon_events.2
+#   }
+# }
+
+on_ruler_created = {
+	events = {
+		vertex_canon_events.200 # add extra traits
+	}
+}
+
+# Custom actions of our own
+on_vertex_special_orbital_protection_adding = {
+	events = {
+		vertex_canon_events.250
+	}
+}
+
+on_vertex_special_orbital_protection_removing = {
+	events = {
+		vertex_canon_events.251
+	}
+}

@@ -1,0 +1,53 @@
+utility_component_template = {
+	key = "LARGE_VERTEX_DCA_PHASER"
+	size = aux
+	icon = "GFX_ship_part_vertex_metatron_cloak"
+	icon_frame = 1
+	power = @power_vertex_metatron_L1
+
+	component_set = "VERTEX_DCA_PHASER"
+	custom_tooltip = "VERTEX_DCA_PHASER_TOOLTIP"
+
+	# modifiers section
+	modifier = {
+		ship_cloaking_strength_add = 2
+	}
+
+	triggered_ship_modifier = {
+		potential = {
+			is_cloaked = yes
+			has_non_metatron_shields = yes
+		}
+		modifier = {
+			ship_shield_reduction = 1
+		}
+	}
+
+	# requirements section
+	prerequisites = { "tech_vertex_containment" }
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @l_t7_cost
+			rare_crystals = 2
+		}
+		upkeep = {
+			energy = @l_t7_upkeep_energy
+			alloys = @l_t7_upkeep_alloys
+		}
+	}
+
+	ship_limit = 1
+	size_restriction = { vertex_special_command_platform }
+
+	# AI control section
+	ai_tags = {
+		gunship_stealth
+		explosive_stealth
+		carrier_stealth
+		screen_stealth
+		artillery_stealth
+		brawler_stealth
+		energy_torpedoes_stealth
+	}
+}

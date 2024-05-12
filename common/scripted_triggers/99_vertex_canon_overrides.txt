@@ -1,0 +1,58 @@
+# can_be_leader = {
+# 	has_citizenship_rights = yes
+# 	NOR = {
+#     has_trait = trait_syncretic_proles
+
+#     # Not lack of free will, but regardless cannot be a ruler
+#     has_trait = trait_vertex_synergistic_precursor
+#     has_trait = trait_vertex_bioengineered
+#   }
+# 	can_think = yes
+# 	OR = {
+# 		is_robot_pop = no
+# 		root = {
+# 			OR = {
+# 				has_technology = tech_synthetic_leaders
+# 				has_authority = auth_machine_intelligence
+# 				is_mechanical_empire = yes
+# 				is_individual_machine = yes
+# 			}
+# 		}
+# 	}
+# 	OR = {
+# 		is_same_species = root
+# 		root = {
+# 			NAND = {
+# 				has_origin = origin_necrophage
+# 				has_trait = trait_necrophage
+# 			}
+# 		}
+# 	}
+# }
+
+# Proxima leaders act as if they were gestalt even though they're not
+# trait_is_gestalt_check = {
+# 	OR = {
+# 		AND = {
+# 			exists = owner
+# 			owner = {
+#         OR = {
+#           is_gestalt = yes
+#           has_country_flag = vertex_country_proxima
+#         }
+#       }
+# 		}
+# 		AND = {
+# 			exists = from
+# 			from = {
+# 				is_scope_type = country
+
+#         OR = {
+#           is_gestalt = yes
+#           has_country_flag = vertex_country_proxima
+#         }
+# 			}
+# 		}
+# 	}
+# }
+

@@ -1,0 +1,10 @@
+# Machine Empire - Metatron
+part = {
+	location = 1
+	localization = "START_SCREEN_PART_TWO_VERTEX"
+
+	trigger = {
+		is_species_class = MACHINE
+		has_country_flag = vertex_country_proxima
+	}
+}

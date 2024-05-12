@@ -1,0 +1,3 @@
+concept_vertex_synergistic_precursor = {
+	icon = "gfx/interface/icons/traits/trait_adaptive.dds"
+}

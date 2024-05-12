@@ -1,0 +1,7 @@
+vertex_canon_shard = {
+  species_class = MACHINE
+
+  portraits = {
+    "shard_unit_wolf"
+  }
+}

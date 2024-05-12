@@ -1,0 +1,41 @@
+component_set = {
+	key = "ENERGY_VERTEX_PHANTOM_HAMMER"
+
+	icon = "GFX_ship_part_vertex_phantom_hammer"
+	icon_frame = 1
+}
+
+component_set = {
+	key = "ENERGY_VERTEX_OBLIVION"
+
+	icon = "GFX_ship_part_deluge"
+	icon_frame = 1
+}
+
+component_set = {
+	key = "ENERGY_VERTEX_FIRESTORM"
+
+	icon = "GFX_ship_part_vertex_firestorm"
+	icon_frame = 1
+}
+
+component_set = {
+	key = "VERTEX_VOIMA_ARMOR"
+
+	icon = "GFX_ship_part_vertex_voima_armor"
+	icon_frame = 1
+}
+
+component_set = {
+	key = "VERTEX_DCA_DEFLECTOR"
+
+	icon = "GFX_ship_part_vertex_metatron_shield"
+	icon_frame = 1
+}
+
+component_set = {
+	key = "VERTEX_DCA_PHASER"
+
+	icon = "GFX_ship_part_vertex_metatron_cloak"
+	icon_frame = 1
+}

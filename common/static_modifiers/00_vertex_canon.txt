@@ -1,0 +1,12 @@
+vertex_special_orbital_protection_modifier = {
+	icon = gfx/interface/icons/modifiers/mod_vertex_orbital_protection.dds
+	#custom_tooltip = vertex_special_orbital_protection_modifier_tooltip # this hides modifiers from being shown
+
+	planet_crime_mult = -0.2
+	planet_stability_add = 15
+	# pop_amenities_usage_organic_mult = -0.10
+	# pop_amenities_usage_robotic_mult = -0.10
+
+	# fully protects the planet from all bombardment until destroyed
+	planet_orbital_bombardment_damage = -1000.0
+}

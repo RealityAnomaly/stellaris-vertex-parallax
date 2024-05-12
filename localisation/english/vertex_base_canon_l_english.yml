@@ -1,0 +1,172 @@
+﻿l_english:
+ ENERGY_VERTEX_PHANTOM_HAMMER:0 "Phantom Hammer"
+ ENERGY_VERTEX_PHANTOM_HAMMER_DESC:0 "An extremely powerful ion-propelled antimatter weapon, which cuts through all objects with an overpenetrating beam that annihilates all matter."
+
+ ENERGY_VERTEX_OBLIVION:0 "Oblivion"
+ ENERGY_VERTEX_OBLIVION_DESC:0 "A scaled-down and lower power version of the Phantom Hammer, the Oblivion class of Vertex weaponry, also mounted on Shard units, is both precise and fast to recharge."
+ ENERGY_VERTEX_OBLIVION_LARGE:0 "Oblivion X-10"
+
+ ENERGY_VERTEX_GRID:0 "GRID"
+ ENERGY_VERTEX_GRID_DESC:0 "Short for Gamma Ray Irradiation Device, GRID is a fearsome anti-biological weapon developed by Metatron that irradiates targets with an immediately lethal dose of gamma radiation."
+ ENERGY_VERTEX_GRID_LARGE:0 "GRID"
+
+ ENERGY_VERTEX_FIRESTORM:0 "Firestorm II"
+ ENERGY_VERTEX_FIRESTORM_DESC:0 "Advanced, gravity-propelled orbital bombardment system developed by Helios Corporation. Cannot be used against hostile fleets."
+
+ VERTEX_DCA_DEFLECTOR:0 "DCA Shield Generator"
+ VERTEX_DCA_DEFLECTOR_DESC:0 "This is a scaled-up version of Metatron's Dynamic Containment Array shielding system, first used on ground military assets and to protect individual Vertex Shard units."
+ VERTEX_DCA_DEFLECTOR_TOOLTIP:0 "100% chance to absorb all non-penetrating impacts until energy threshold overwhelmed."
+
+ SMALL_VERTEX_DCA_DEFLECTOR:0 "DCA Shield Generator"
+ MEDIUM_VERTEX_DCA_DEFLECTOR:0 "DCA Shield Generator"
+ LARGE_VERTEX_DCA_DEFLECTOR:0 "DCA Shield Generator"
+
+ VERTEX_DCA_PHASER:0 "Metatron Phasing Generator"
+ VERTEX_DCA_PHASER_DESC:0 "Advanced dimensional phasing technology developed by Metatron laboratories, part of a comprehensive threat protection system that is also used in Shard units."
+ VERTEX_DCA_PHASER_TOOLTIP:0 "$CLOAKING_SHIELD_REDUCTION_HEADER$ §R100%§!\n\n§E$SHIP_SHIELD_REDUCTION_CLOAKING$ can be prevented if DCA Shield Generators are equipped on their own. The use of any other shield type will negate this effect.§!\n\n"
+ LARGE_VERTEX_DCA_PHASER:0 "Metatron Phasing Generator"
+
+ VERTEX_NANOFIELD_DEFLECTOR:0 "Nanofield Generator"
+ VERTEX_NANOFIELD_DEFLECTOR_DESC:0 "Invented by the Tasen race, this special nanobot-based shielding system is highly resistant to most attacks by conventional weaponry."
+ LARGE_VERTEX_NANOFIELD_DEFLECTOR:0 "Nanofield Generator"
+
+ VERTEX_VOIMA_ARMOR:0 "Voima Composite Armor"
+ VERTEX_VOIMA_ARMOR_DESC:0 "Composite armour developed by Voima Tech Industries, a larger version of that used in Shard unit frames."
+ tt_LARGE_VERTEX_VOIMA_ARMOR:0 "Shield Hit Points: §G+450§!"
+ LARGE_VERTEX_VOIMA_ARMOR:0 "Voima Composite Armor"
+
+ VERTEX_COMPUTER_SENTIENT:0 "Shard AI Core"
+ VERTEX_COMPUTER_SENTIENT_DESC:0 "This ship is a sentient Shard individual."
+ VERTEX_COMPUTER_SENTIENT_TOOLTIP:0 "This component cannot be removed."
+
+ VERTEX_CORVETTE_SINGULARITY_REACTOR:0 "Singularity Reactor"
+ VERTEX_DESTROYER_SINGULARITY_REACTOR:0 "Singularity Reactor"
+ VERTEX_CRUISER_SINGULARITY_REACTOR:0 "Singularity Reactor"
+ VERTEX_BATTLESHIP_SINGULARITY_REACTOR:0 "Singularity Reactor"
+ VERTEX_TITAN_SINGULARITY_REACTOR:0 "Singularity Reactor"
+ VERTEX_COLOSSUS_SINGULARITY_REACTOR:0 "Singularity Reactor"
+ VERTEX_JUGGERNAUT_SINGULARITY_REACTOR:0 "Singularity Reactor"
+ VERTEX_PLATFORM_SINGULARITY_REACTOR:0 "Singularity Reactor"
+ VERTEX_ION_CANNON_SINGULARITY_REACTOR:0 "Singularity Reactor"
+ VERTEX_STARBASE_SINGULARITY_REACTOR:0 "Singularity Reactor"
+
+ VERTEX_ACP_BOW:0 "ACP Bow"
+ VERTEX_ACP_MID:0 "ACP Core"
+ VERTEX_ACP_STERN:0 "ACP Stern"
+
+ vertex_special_orbital_protection:0 "Orbital Fortification"
+ vertex_special_orbital_protection_context_menu:0 "Fortify"
+ vertex_special_orbital_protection_tooltip:0 "§HFortify Planet§!\nUse advanced Firestorm II weapons and DCA shields to protect the target planet from attacks inside and out."
+ vertex_special_orbital_protection_activity_key:0 "Moving to fortify $PLANET_NAME|Y$"
+ vertex_special_orbital_protection_modifier:0 "Orbital Fortification"
+ vertex_special_orbital_protection_modifier_tooltip:0 "An Armoured Command Platform is protecting this planet from orbit with Firestorm II and DCA shields."
+
+ bombardment_vertex_firestorm:0 "Firestorm Bombing"
+ bombardment_vertex_firestorm_desc:0 "$bombardment_vertex_firestorm$ uses Firestorm II weapons mounted on orbital ships to annihilate strategic targets on the planetary surface.\n- §RMassive§! damage to §YArmies§!\n- §YModerate§! damage to §YPlanet§!\n- §ELight§! damage to §YPops§!\n- Will bombard undefended planets when §H$policy_orbital_bombardment_accept_surrender$§! is §H$orbital_bombardment_surrender_forbidden$§!\n- Will §RNOT§! kill the last §Y$MIN_POPS$§! Pops"
+
+ bombardment_vertex_grid:0 "GRID Sweep"
+ bombardment_vertex_grid_desc:0 "$bombardment_vertex_grid$ uses Gamma Ray Irradiation Device weapons mounted on orbital ships to immediately and precisely annihilate hostile organic life forms.\n- §RMassive§! damage to §YArmies§!\n- §ENo§! damage to §YPlanet§!\n- §ELight§! damage to §YPops§!\n- Will §RNOT§! bombard undefended planets\n- Will §RNOT§! kill the last §Y$MIN_POPS$§! Pops"
+
+ bombardment_vertex_grid_indiscriminate:0 "Indiscriminate GRID Sweep"
+ bombardment_vertex_grid_indiscriminate_desc:0 "$bombardment_vertex_grid$ uses Gamma Ray Irradiation Device weapons mounted on orbital ships to immediately and precisely annihilate all organic life forms.\n- §RMassive§! damage to §YArmies§!\n- §ENo§! damage to §YPlanet§!\n- §ELight§! damage to §YPops§!\n- Will bombard undefended planets\n- Will immediately kill all Pops"
+
+ building_vertex_black_mountain:0 "Black Mountain"
+ building_vertex_black_mountain_desc:0 "This building is the headquarters of Raven, a governmental authority which ensures stability and safety in interdimensional affairs. Its destruction would have disastrous consequences."
+ building_vertex_black_mountain_effect_desc:0 "Produces a small amount of $r_unity$ and $r_physics$"
+
+ building_vertex_particle_accelerator:0 "Particle Accelerator"
+ building_vertex_particle_accelerator_desc:0 "Industrial particle accelerators that smash various exotic isotopes into each other at relativistic speeds in order to create miniature black holes."
+ building_vertex_particle_accelerator_effect_desc:0 "Produces a small amount of $r_vertex_singularity_cores$"
+
+ building_vertex_nanobot_fabricator:0 "Nanobot Fabricators"
+ building_vertex_nanobot_fabricator_desc:0 "Precision production facilities designed to grow industrial quantities of nanobots."
+ building_vertex_nanobot_fabricator_effect_desc:0 "Slowly produces a small amount of $r_nanites$"
+
+ building_vertex_tombaugh_reactor:0 "Tombaugh Reactor"
+ building_vertex_tombaugh_reactor_desc:0 "This is a highly illegal reactor, which extracts power and Red Matter from the destruction of dimensions."
+ building_vertex_tombaugh_reactor_effect_desc:0 "Produces a large amount of $r_energy$ and a small amount of $r_vertex_chaotic_matter$"
+
+ building_vertex_repurposed_tombaugh_reactor:0 "Repurposed Tombaugh Reactor"
+ building_vertex_repurposed_tombaugh_reactor_desc:0 "This was once a highly illegal Tombaugh reactor capable of extracting power from the destruction of dimensions - though stripped of its Mass Conversion Relay, it can still be safely used to siphon dark matter from the Abyss Dimension."
+ building_vertex_repurposed_tombaugh_reactor_effect_desc:0 "Produces $r_dark_matter$ and a small amount of $r_energy$"
+
+ tech_vertex_somnium:0 "Somnium"
+ tech_vertex_somnium_desc:0 "Placeholder"
+
+ tech_vertex_voimaflex:0 "Voimaflex"
+ tech_vertex_voimaflex_desc:0 "An incredibly strong and resilient compound developed by Voima Tech Industries."
+
+ tech_vertex_containment:0 "Dynamic Containment Array"
+ tech_vertex_containment_desc:0 "Developed in top-secret Metatron laboratories, DCA force fields use immense amounts of energy to directly counter impacts on the quantum level."
+
+ tech_vertex_singularity_production:0 "Singularity Production"
+ tech_vertex_singularity_production_desc:0 "New, purpose-built industrial particle accelerators allow singularities to not only be created on demand, but held in a stable containment field."
+
+ tech_vertex_annihilation_weapons:0 "Annihilation Weapons"
+ tech_vertex_annihilation_weapons_desc:0 "These weapons use captive singularities and an immense amount of energy to produce a beam of antimatter so powerful and concentrated it annihilates everything in its path, completely bypassing shields and armour."
+
+ tech_vertex_nanobots:0 "Nanobots"
+ tech_vertex_nanobots_desc:0 "Placeholder"
+
+ tech_vertex_nanofield:0 "Nanofields"
+ tech_vertex_nanofield_desc:0 "Placeholder"
+ tech_vertex_nanofield_personal:0 "Personal Nanofields"
+ tech_vertex_nanofield_personal_desc:0 "Placeholder"
+ tech_vertex_nanofield_ship:0 "Ship Nanofields"
+ tech_vertex_nanofield_ship_desc:0 "Placeholder"
+ tech_vertex_nanofield_planetary:0 "Planetary Nanofields"
+ tech_vertex_nanofield_planetary_desc:0 "Placeholder"
+
+ tech_vertex_firestorm:0 "Firestorm II"
+ tech_vertex_firestorm_desc:0 "Firestorm II"
+
+ origin_metatron_shard_unit:0 "Metatron Project"
+ origin_metatron_shard_unit_desc:0 "This synthetic species was created as a Metatron laboratory project, and after rapidly surpassing its creators it developed interstellar technology and a settlement of its own.\n\nThe Autonomous Command Platform, a sentient spacecraft orbiting Alpha Node and equipped with high-power weaponry, protects the planet from harm.\n\nUnfortunately, the production of quantum technology is suspended at the moment due to the lack of singularity cores. Perhaps this is a challenge that can be solved in time..."
+ origin_metatron_shard_unit_secondary_species:0 "Automated Robots"
+ origin_tooltip_metatron_shard_unit_effects:0 "- Start with a number of supporting non-sentient £pop£ §IPops§!\n- $HOMEWORLD$ Protected by an §IAutonomous Command Platform§!\n- Potential to produce $r_vertex_singularity_cores$ and advanced Metatron weaponry"
+ origin_tooltip_metatron_shard_unit_negative_effects:0 "- Game ends if ACP is destroyed\n- Synthetic £pop£ §IPops§! require $r_nanites$ and $r_dark_matter$ to build\n§R- Sleeping anomalies threaten your reality...§!"
+
+ civic_vertex_synergistic_precursor:0 "Synergistic Precursor"
+ civic_vertex_synergistic_precursor_desc:0 "A precursor species forms an integral part of this society. $trait_vertex_synergistic_precursor_desc$"
+ civic_vertex_synergistic_precursor_secondary_species:0 "Precursor Species"
+
+ trait_vertex_neural_mesh:0 "Neural Mesh"
+ trait_vertex_neural_mesh_desc:0 "§LThis species has a vast network connecting the minds of all individuals, allowing them to collaborate without friction.§!"
+
+ trait_vertex_polyvore:0 "Polyvore"
+ trait_vertex_polyvore_desc:0 "§LThis species can and will eat anything, but also has a strange affinity for ingesting expensive physical objects, like computers and other consumer goods.§!"
+
+ trait_vertex_expensive:0 "Very Expensive"
+ trait_vertex_expensive_desc:0 "§LThese androids require rare and hard-to-build components, and integrate high-specification combat systems, making them very expensive.§!\n"
+
+ trait_vertex_erratic_processors:0 "Erratic Processors"
+ trait_vertex_erratic_processors_desc:0 "§LThe processors of these units rarely produce the same output when given an identical context and input. Scientific research should not be entrused to these machines.§!\n"
+
+ trait_vertex_synergistic_precursor:0 "Synergistic Precursor"
+ trait_vertex_synergistic_precursor_desc:0 "§LThis species evolved long before the machines it invented, now living alongside them as peers.§!"
+ trait_vertex_synergistic_precursor_effect:0 "$MOD_POP_HAPPINESS$: §G+10%§!\n$mod_planet_jobs_produces_mult$: §G+10%§!\nCannot generate §YLeaders§!\nCannot be employed in §Y$pop_cat_ruler$§! or §Y$pop_cat_specialist$§! Jobs"
+
+ trait_vertex_bioengineered:0 "Biologically Engineered"
+ trait_vertex_bioengineered_desc:0 "§LThis species was artifically uplifted and biologically engineered into sapience.§!"
+
+ trait_vertex_metatron_design: "Metatron Weapon"
+ trait_vertex_metatron_design_desc: "Integrated Metatron Obvlivion, DCA, and Phasing technology makes every unit a near-indestructible opponent."
+ VERTEX_METATRON_DESIGN_TT: "Army Damage: §G+200%§!\nArmy Damage Taken: §G-300%§!\nArmy Health: §G+50%§!\n£job_enforcer£ $job_enforcer_plural$ Crime Reduction: §G+5§!"
+
+ concept_vertex_synergistic_precursor: "$trait_vertex_synergistic_precursor$"
+ concept_vertex_synergistic_precursor_desc: "- $MOD_POP_HAPPINESS$: §G+10%§!\n- $mod_planet_jobs_produces_mult$: §G+10%§!\n- Cannot generate §YLeaders§!\n- Cannot be employed in §Y$pop_cat_ruler$§! or §Y$pop_cat_specialist$§! Jobs\n\n§L$trait_vertex_synergistic_precursor_desc$§!"
+
+ sr_vertex_chaotic_matter:0 "Red Matter"
+ sr_vertex_chaotic_matter_desc:0 "Exceedingly unstable and dangerous, this type of matter is only present in the so-called Abyss Dimension, and is extractable via chaotic reactors."
+
+ vertex_singularity_cores:0 "Singularity Cores"
+ vertex_singularity_cores_desc:0 "Necessary for many advanced devices that exploit physics for power generation and defense, these miniature black holes, produced in specially designed particle accelerator facilities, are kept in suspension by Metatron containment technology."
+
+ r_vertex_singularity_cores:1 "£vertex_singularity_cores£ §Y$vertex_singularity_cores$§!"
+ r_vertex_chaotic_matter:1 "£vertex_chaotic_matter£ §Y$vertex_chaotic_matter$§!"
+
+ mod_planet_pop_assemblers_alloys_upkeep_mult:0 "Pop Assembly $r_alloys$ Multiplier"
+ mod_planet_pop_assemblers_nanites_upkeep_add:0 "Pop Assembly $r_nanites$ Cost"
+ mod_planet_pop_assemblers_sr_dark_matter_upkeep_add:0 "Pop Assembly $sr_dark_matter$ Cost"
+
+ FLAG_CATEGORY_parallax:0 "Parallax"

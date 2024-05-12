@@ -1,0 +1,110 @@
+# DCA shields are like shields plus big shield capacitors
+# The only way to bypass them is with very high energy shots
+utility_component_template = {
+	key = "SMALL_VERTEX_DCA_DEFLECTOR"
+	size = small
+	icon = "GFX_ship_part_vertex_metatron_shield"
+	icon_frame = 1
+	power = @power_vertex_metatron_S1
+
+	component_set = "VERTEX_DCA_DEFLECTOR"
+	custom_tooltip = "VERTEX_DCA_DEFLECTOR_TOOLTIP"
+
+	# modifiers section
+	modifier = {
+		ship_shield_add = @shield_S7 # 360
+		ship_shield_regen_add_static = @shield_S7 # regen all shield HP every day
+	}
+
+	ship_modifier = {
+		# special property: prevent weapons bypassing shields
+		ship_shield_hardening_add = 100.00
+	}
+
+	# requirements section
+	prerequisites = { "tech_vertex_containment" }
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @s_t7_cost
+			rare_crystals = 2
+		}
+		upkeep = {
+			energy = @s_t7_upkeep_energy
+			alloys = @s_t7_upkeep_alloys
+		}
+	}
+}
+
+utility_component_template = {
+	key = "MEDIUM_VERTEX_DCA_DEFLECTOR"
+	size = medium
+	icon = "GFX_ship_part_vertex_metatron_shield"
+	icon_frame = 1
+	power = @power_vertex_metatron_M1
+
+	component_set = "VERTEX_DCA_DEFLECTOR"
+	custom_tooltip = "VERTEX_DCA_DEFLECTOR_TOOLTIP"
+
+	# modifiers section
+	modifier = {
+		ship_shield_add = @shield_M7 # 900
+		ship_shield_regen_add_static = @shield_M7 # regen all shield HP every day
+	}
+
+	ship_modifier = {
+		# special property: prevent weapons bypassing shields
+		ship_shield_hardening_add = 100.00
+	}
+
+	# requirements section
+	prerequisites = { "tech_vertex_containment" }
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @m_t7_cost
+			rare_crystals = 2
+		}
+		upkeep = {
+			energy = @m_t7_upkeep_energy
+			alloys = @m_t7_upkeep_alloys
+		}
+	}
+}
+
+# 2160 * 6 = 12960, enough to survive a perdition beam at max damage
+utility_component_template = {
+	key = "LARGE_VERTEX_DCA_DEFLECTOR"
+	size = large
+	icon = "GFX_ship_part_vertex_metatron_shield"
+	icon_frame = 1
+	power = @power_vertex_metatron_L1
+
+	component_set = "VERTEX_DCA_DEFLECTOR"
+	custom_tooltip = "VERTEX_DCA_DEFLECTOR_TOOLTIP"
+
+	# modifiers section
+	modifier = {
+		ship_shield_add = @shield_L7 # 2160
+		ship_shield_regen_add_static = @shield_L7 # regen all shield HP every day
+	}
+
+	ship_modifier = {
+		# special property: prevent weapons bypassing shields
+		ship_shield_hardening_add = 100.00
+	}
+
+	# requirements section
+	prerequisites = { "tech_vertex_containment" }
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @l_t7_cost
+			rare_crystals = 2
+		}
+		upkeep = {
+			energy = @l_t7_upkeep_energy
+			alloys = @l_t7_upkeep_alloys
+		}
+	}
+}

@@ -1,0 +1,91 @@
+tech_vertex_voimaflex = {
+	tier = 0
+	area = engineering
+
+	is_rare = no
+	category = { materials }
+	start_tech = yes
+
+	# requirements section
+	cost = @tier4cost2
+	
+	weight = @tier4weight2
+	weight_modifier = {
+		factor = 0
+	}
+
+	potential = {
+		has_country_flag = vertex_country_proxima
+	}
+	starting_potential = {
+		has_country_flag = vertex_country_proxima
+	}
+
+	# AI control section
+	ai_update_type = all
+	ai_weight = {}
+}
+
+tech_vertex_nanobots = {
+	tier = 0
+	area = engineering
+
+	is_rare = yes
+	category = { field_manipulation }
+	start_tech = yes
+
+	# requirements section
+	cost = @tier4cost2
+	
+	weight = @tier4weight2
+	weight_modifier = {
+		factor = 0
+	}
+
+	potential = {
+		OR = {
+			has_country_flag = vertex_country_proxima
+			has_country_flag = vertex_country_tasen
+			has_country_flag = vertex_country_komato
+		}
+	}
+	starting_potential = {
+		OR = {
+			has_country_flag = vertex_country_proxima
+			has_country_flag = vertex_country_tasen
+			has_country_flag = vertex_country_komato
+		}
+	}
+
+	# AI control section
+	ai_update_type = all
+	ai_weight = {}
+}
+
+tech_vertex_firestorm = {
+	tier = 0
+	area = engineering
+
+	is_rare = yes
+	category = { propulsion }
+	start_tech = yes
+
+	# requirements section
+	cost = @tier4cost2
+	
+	weight = @tier4weight2
+	weight_modifier = {
+		factor = 0
+	}
+
+	potential = {
+		has_country_flag = vertex_country_proxima
+	}
+	starting_potential = {
+		has_country_flag = vertex_country_proxima
+	}
+
+	# AI control section
+	ai_update_type = military
+	ai_weight = {}
+}

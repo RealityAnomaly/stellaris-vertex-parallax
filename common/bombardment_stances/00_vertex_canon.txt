@@ -1,0 +1,110 @@
+# Indiscriminate Firestorm bombing - extremely lethal
+vertex_firestorm = {
+	trigger = {
+		owner = {
+			has_country_flag = vertex_country_proxima
+		}
+		controller = {
+			OR = {
+				has_policy_flag = orbital_bombardment_armageddon
+				is_crisis_faction = yes
+				has_menace_perk = menp_death_from_above
+			}
+		}
+		# TODO: any ship size with Firestorm II weapons
+		is_ship_size = vertex_special_command_platform
+	}
+
+	default = no
+
+	stop_when_armies_dead = no
+	abduct_pops = no
+
+	planet_damage = 1.5
+	army_damage = 3.5
+
+	kill_pop_chance = {
+		base = 1.5
+	}
+	min_pops_to_kill_pop = 0
+
+	# root = fleet
+	# from = planet
+	ai_weight = {
+		weight = 10
+		modifier = {
+			factor = 0.01
+			exists = from
+			from = {
+				owner = { NOT = { is_hostile = root.owner } }
+				NAND = {
+					controller = { is_crisis_faction = yes }
+					planet_garrison_strength > 0
+				}
+			}
+			exists = owner
+			owner = { is_crisis_faction = no }
+		}
+	}
+}
+
+# Selective sweeps with Gamma Ray Irradiation Device
+# unfortunately we cannot prevent this from killing non-organic garrisons for now
+vertex_grid = {
+	trigger = {
+		owner = {
+			has_country_flag = vertex_country_proxima
+		}
+		# TODO: any ship size with GRID weapons
+		is_ship_size = vertex_special_command_platform
+	}
+
+	default = no
+
+	stop_when_armies_dead = yes
+	accept_surrender = yes
+	abduct_pops = no
+
+	planet_damage = 0.0
+	army_damage = 1.0 # how are we supposed to prevent damage to non-organic army types?
+	# army_damage = {
+	# 	base = 1.5
+	# 	modifier = {
+	# 		factor = 0
+	# 		OR = {
+	# 			pop_has_trait = trait_machine_unit
+	# 			pop_has_trait = trait_mechanical
+	# 		}
+	# 	}
+	# }
+
+	kill_pop_chance = {
+		base = 0.10
+	}
+	min_pops_to_kill_pop = 21
+
+	# kill_pop_chance = { # Can only affect organics
+	# 	base = 2.0
+	# 	modifier = {
+	# 		factor = 0
+	# 		OR = {
+	# 			pop_has_trait = trait_machine_unit
+	# 			pop_has_trait = trait_mechanical
+	# 		}
+	# 	}
+	# }
+	# min_pops_to_kill_pop = 0
+
+	# root = fleet
+	# from = planet
+	ai_weight = {
+		weight = 10
+		modifier = {
+			factor = 0.01
+			exists = from
+			from = {
+				owner = { NOT = { is_hostile = root.owner } }
+			}
+		}
+	}
+}

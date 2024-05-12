@@ -1,0 +1,164 @@
+# Skystrike: orbital payloads, "rods from god" - mass destruction (can be used against planet)
+# Hellfire: low-orbit bombardment system (orbital bombardment)
+# Avarice: nuclear missiles
+# Seraphim: special
+
+# These weapons are mainly restricted by ship power requirements (very high), and per-unit cost (requires Singularity Cores)
+# Annihilation class weapons counter DCA shields in various ways
+
+# Metatron Oblivion
+# This is like a mini Phantom Hammer but does not have complete shield penetration and has much less range
+weapon_component_template = {
+	key = "ENERGY_VERTEX_OBLIVION_LARGE"
+
+	size = large
+	entity = "large_kinetic_gun_entity"
+	type = instant
+	icon = "GFX_ship_part_deluge"
+	icon_frame = 1
+	projectile_gfx = "space_whale_weapon"
+	tags = { weapon_type_energy l_slot }
+	ai_tags = { weapon_role_anti_shield }
+
+	component_set = "ENERGY_VERTEX_OBLIVION"
+
+	# statistics below, copied from null void beam
+	#cost = 52.00
+	power = @power_vertex_metatron_L1 # need to balance power
+	damage = {
+		min = 1500.00
+		max = 3000.00
+	}
+	hull_damage = 1.10
+	#shield_damage = 0.00
+	shield_penetration = 0.30
+	armor_damage = 1.25
+	armor_penetration = 0.10
+	windup = {
+		min = 20.00
+		max = 50.00
+	}
+	total_fire_time = 80.00 # same as cooldown
+	range = 80.00
+	accuracy = 0.90
+	tracking = 0.05
+	size_damage_factor = 0.00
+	military_power_multiplier = 1.00
+
+	# resource requirements section
+	# requirements section
+	prerequisites = { "tech_vertex_annihilation_weapons" }
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @l_t7_cost
+			rare_crystals = 2
+		}
+		upkeep = {
+			energy = @l_t7_upkeep_energy
+			alloys = @l_t7_upkeep_alloys
+		}
+	}
+
+	# ai controls
+	ai_weight = {
+		weight = 1
+	}
+}
+
+# Metatron Phantom Hammer, "The Big One"
+#   Instant-kill weapon against almost all ships
+#   Extreme damage as well as complete shield and armor penetration, but has a very high charge time
+weapon_component_template = {
+	key = "ENERGY_VERTEX_PHANTOM_HAMMER"
+	size = titanic
+	type = instant
+	prio_projectile = yes
+
+	icon = "GFX_ship_part_vertex_phantom_hammer"
+	icon_frame = 1
+
+	firing_arc = 10.0
+	use_ship_kill_target = no
+
+	tags = { weapon_type_energy weapon_role_artillery t_slot }
+
+	component_set = "ENERGY_VERTEX_PHANTOM_HAMMER"
+	projectile_gfx = "perdition_beam"
+	size_restriction = { titan ion_cannon vertex_special_command_platform }
+
+	target_weights = {
+		titan = 3
+		battleship = 2
+	}
+
+	# statistics below, copied from perdition beam
+	#cost = 500.00
+	power = -5000.00
+	damage = {
+		min = 15000.00
+		max = 30000.00
+	}
+	#hull_damage = 1.50
+	#shield_damage = 0.00
+	shield_penetration = 1.00
+	#armor_damage = 1.25
+	armor_penetration = 1.00
+	windup = {
+		min = 150.00
+		max = 600.00
+	}
+	total_fire_time = 2000.00 # same as cooldown
+	range = 250.00
+	accuracy = 1.00
+	tracking = 0.00
+	size_damage_factor = 0.00
+	military_power_multiplier = 1.00
+
+	# requirements section
+	prerequisites = { "tech_vertex_annihilation_weapons" }
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @titanic_t7_cost
+			rare_crystals = @titanic_t7_rare
+			vertex_singularity_cores = 1
+		}
+		upkeep = {
+			energy = @titanic_t7_upkeep_energy
+			alloys = @titanic_t7_upkeep_alloys
+		}
+	}
+
+	# ai controls
+	ai_weight = {
+		weight = 1
+	}
+}
+
+utility_component_template = {
+	key = "ENERGY_VERTEX_FIRESTORM"
+	size = aux
+	icon = "GFX_ship_part_vertex_firestorm"
+	icon_frame = 1
+	power = -10
+	ship_modifier = {
+		ship_orbital_bombardment_mult = 0.50
+	}
+	class_restriction = { shipclass_military }
+	component_set = "ENERGY_VERTEX_FIRESTORM"
+	size_restriction = { titan vertex_special_command_platform }
+
+	# requirements section
+	prerequisites = { "tech_vertex_firestorm" }
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @l_t7_cost
+		}
+		upkeep = {
+			energy = @l_t7_upkeep_energy
+			alloys = @l_t7_upkeep_alloys
+		}
+	}
+}
